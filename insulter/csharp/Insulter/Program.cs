@@ -21,15 +21,16 @@ namespace Insulter
             List<int> indexes = new List<int>();
             while (indexes.Count < 3)
             {
-                int candidate  = new Random().Next( int.MinValue, int.MaxValue )
-                if (indexes.Contains(candidate))
+                Random rand = new Random();
+                int candidate  = rand.Next(0,6);
+                if (!indexes.Contains(candidate))
                 {
                     indexes.Add(candidate);
                 }
             };
             for (int i = 0; i < indexes.Count; i++)
             {
-                int index = indexes[0];
+                int index = indexes[i];
                 Console.WriteLine(insults[index]);
             }
              
